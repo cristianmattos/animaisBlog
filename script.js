@@ -1,18 +1,24 @@
 function initTabNav() {
-  const animaisLista = document.querySelectorAll(".js-tabmenu li");
-  const animalDescricao = document.querySelectorAll(".js-tabcontent section");
+  const animaisLista = document.querySelectorAll("[data-tab='menu'] li");
+  const animalDescricao = document.querySelectorAll("[data-tab='content'] section");
+
+
+ 
 
   if (animaisLista.length && animalDescricao.length) {
     animalDescricao[0].classList.add("ativo");
 
-    function addClass(e) {
-      animalDescricao.forEach((item) => {
-        item.classList.remove("ativo");
-        if (item.id === e.target.id) item.classList.add("ativo");
+    function addClass(index) {
+      animalDescricao.forEach((section) => {
+       section.classList.remove('ativo');
       });
+      const direcao = animalDescricao[index].dataset.anime
+      animalDescricao[index].classList.add('ativo', direcao);
     }
-    animaisLista.forEach((itemAnimal) => {
-      itemAnimal.addEventListener("click", addClass);
+    animaisLista.forEach((itemAnimal, index) => {
+      itemAnimal.addEventListener("click", () =>{
+        addClass(index)
+      } );
     });
   }
 }
@@ -34,8 +40,10 @@ initTabNav();
 //   });
 // });
 
+
+
 function initAccordion() {
-  const accordionList = document.querySelectorAll(".js-accordion dt");
+  const accordionList = document.querySelectorAll("[data-anime='accordion'] dt");
   const activeClass = "ativo";
 
   if (accordionList.length) {
@@ -54,7 +62,7 @@ function initAccordion() {
 }
 initAccordion();
 
-const sections = document.querySelectorAll(".js-scroll");
+const sections = document.querySelectorAll("[data-anime='scroll']");
 
 function initAnimacaoScroll() {
   if (sections.length) {
