@@ -4,16 +4,17 @@ export default function outsideClick(element, events, callback) {
 
   if (!element.hasAttribute(outside)) {
     events.forEach((userEvents) => {
-      html.addEventListener(userEvents, handleOutsideclick);
+      setTimeout(() => html.addEventListener(userEvents, handleOutsideclick));
     });
+    element.setAttribute(outside, "");
   }
 
-  function handleOutsideclick(event){
-    if(!element.contains(event.target)){
+  function handleOutsideclick(event) {
+    if (!element.contains(event.target)) {
       element.removeAttribute(outside);
-      events.forEach(userEvents => {
-        html.removeEventListener(userEvent, handleOutsideclick)
-      })
+      events.forEach((userEvents) => {
+        html.removeEventListener(userEvents, handleOutsideclick);
+      });
       callback();
     }
   }
