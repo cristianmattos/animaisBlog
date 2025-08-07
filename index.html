@@ -4,8 +4,22 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Animais Fantásticos</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script>
+(function() {
+  const lang = (navigator.language || navigator.userLanguage).split('-')[0];
+  const langs = {en:'en/', de:'de/', ar:'ar/', fr:'fr/', he:'he/', ja:'ja/', pt:''};
+  const target = `/animaisBlog/${langs[lang] || ''}`;
+  
+  if (!location.pathname.startsWith(target)) {
+    location.replace(target);
+  }
+})();
+</script>
+
+  <title>Animais Fantásticos</title>
+  
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC" rel="stylesheet">
   <script>document.documentElement.classList.add('js')</script>
   <link rel="stylesheet" type="text/css" href="../css/style.css" />
