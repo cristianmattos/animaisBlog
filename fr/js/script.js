@@ -11,6 +11,7 @@ import initFetchBitcoin from "./modules/fetch-bitcoin.js";
 import initRedirect from "./modules/redirect.js";
 
 
+
 initTabNav();
 initAnimacaoScroll();
 initAccordion();
@@ -21,4 +22,4 @@ initMenuMobile();
 initFuncionamento();
 initFetchAnimais();
 initFetchBitcoin();
-initRedirect();
+// initRedirect();

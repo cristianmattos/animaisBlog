@@ -8,7 +8,8 @@ import initMenuMobile from './modules/menu-mobile.js'
 import initFuncionamento from "./modules/funcionamento.js";
 import initFetchAnimais from "./modules/fetch-animais.js";
 import initFetchBitcoin from "./modules/fetch-bitcoin.js";
-import initRedirect from "./modules/redirect.js";
+
+
 
 
 initTabNav();
@@ -21,4 +22,3 @@ initMenuMobile();
 initFuncionamento();
 initFetchAnimais();
 initFetchBitcoin();
-initRedirect();
