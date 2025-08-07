@@ -16,30 +16,30 @@ export default function initRedirect() {
       // Adicione mais idiomas conforme necessário
       switch (lang) {
         case "en":
-          targetPath = "/en/index.html";
+          targetPath = "/animaisBlog/en/index.html";
           break;
         case "de":
-          targetPath = "/de/index.html";
+          targetPath = "/animaisBlog/de/index.html";
           break;
         case "ar":
-          targetPath = "/ar/index.html";
+          targetPath = "/animaisBlog/ar/index.html";
           break;
         case "fr":
-          targetPath = "/fr/index.html";
+          targetPath = "/animaisBlog/fr/index.html";
           break;
         case "he":
-          targetPath = "/he/index.html";
+          targetPath = "/animaisBlog/he/index.html";
           break;
         case "ja":
-          targetPath = "/ja/index.html";
+          targetPath = "/animaisBlog/ja/index.html";
           break;
         case "pt": // Exemplo para português, caso seu navegador esteja em pt-BR, pt-PT, etc.
-          targetPath = "/pt/index.html";
+          targetPath = "/animaisBlog/index.html";
           break;
         default:
           // Idioma padrão caso não haja uma tradução específica
           // Você pode redirecionar para inglês, português, ou uma página neutra
-          targetPath = "/en/index.html"; // Redireciona para inglês como padrão
+          targetPath = "/animaisBlog/index.html"; // Redireciona para inglês como padrão
           break;
       }
 
