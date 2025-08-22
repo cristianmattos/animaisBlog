@@ -9,14 +9,19 @@
   <script>
 (function() {
   const lang = (navigator.language || navigator.userLanguage).split('-')[0];
-  const langs = {en:'en/', de:'de/', ar:'ar/', fr:'fr/', he:'he/', ja:'ja/', pt:''};
-  const target = `/animaisBlog/${langs[lang] || ''}`;
+  const langs = {en:'en/', de:'de/', ar:'ar/', fr:'fr/', he:'he/', ja:'ja/', pt:'index.html'};
+  const target = `/animaisBlog/${langs[lang] || 'index.html'}`;
   
   if (!location.pathname.startsWith(target)) {
     location.replace(target);
   }
 })();
 </script>
+
+ <style>
+    body { visibility: hidden; opacity: 0; }
+    body.loaded { visibility: visible; opacity: 1; }
+  </style>
 
   <title>Animais Fantásticos</title>
   
