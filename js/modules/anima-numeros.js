@@ -1,4 +1,4 @@
-export default function nitAnimaNumeros() {
+export default function initAnimaNumeros() {
   function animaNumeros() {
     const numeros = document.querySelectorAll("[data-numero]");
     numeros.forEach((numero) => {
